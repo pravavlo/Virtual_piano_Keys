@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>virtual piano</title>
+    <link rel="stylesheet" type="text/css" href="pianoStyle.css">
 </head>
 <body>
 <div class="container">
@@ -23,131 +24,6 @@
     <kbd id="u-change">U</kbd>
 </div>
 </div>
-<script>
-    document.addEventListener("keydown", function(event) {
-        if(event.code == "KeyA") {
-            let audio = new Audio("Virtual Piano/task/src/keys/A.mp3");
-            audio.play();
-            }else if(event.code == "KeyS")
-            {
-                let tuneS = new Audio("Virtual Piano/task/src/keys/S.mp3");
-                tuneS.play();
-            }else if(event.code == "KeyD")
-            {
-                let tuneD = new Audio("Virtual Piano/task/src/keys/D.mp3");
-                tuneD.play();
-                //console.log("The 'D' key is pressed.");
-            }else if(event.code == "KeyF")
-            {
-                let tuneF = new Audio("Virtual Piano/task/src/keys/F.mp3");
-                tuneF.play();
-                //console.log("The 'F' key is pressed.");
-            }else if(event.code == "KeyG")
-            {
-                let tuneG = new Audio("Virtual Piano/task/src/keys/G.mp3");
-                tuneG.play();
-                //console.log("The 'G' key is pressed.");
-            }else if(event.code == "KeyH")
-            {
-                let tuneH = new Audio("Virtual Piano/task/src/keys/H.mp3");
-                tuneH.play();
-                //console.log("The 'H' key is pressed.");
-            }else if(event.code == "KeyJ")
-            {
-                let tuneJ = new Audio("Virtual Piano/task/src/keys/J.mp3");
-                tuneJ.play();
-                //console.log("The 'J' key is pressed.");
-             }else if(event.code == "KeyW")
-        {
-            let tuneW = new Audio("Virtual Piano/task/src/BLACK-KEYS/W.mp3");
-            tuneW.play();
-            //console.log("The 'J' key is pressed.");
-        }else if(event.code == "KeyE")
-        {
-            let tuneE = new Audio("Virtual Piano/task/src/BLACK-KEYS/E.mp3");
-            tuneE.play();
-            //console.log("The 'J' key is pressed.");
-        }else if(event.code == "KeyT")
-        {
-            let tuneT = new Audio("Virtual Piano/task/src/BLACK-KEYS/T.mp3");
-            tuneT.play();
-            //console.log("The 'J' key is pressed.");
-        }else if(event.code == "KeyY")
-        {
-            let tuneY = new Audio("Virtual Piano/task/src/BLACK-KEYS/Y.mp3");
-            tuneY.play();
-            //console.log("The 'J' key is pressed.");
-        }else if(event.code == "KeyU")
-        {
-            let tuneU = new Audio("Virtual Piano/task/src/BLACK-KEYS/U.mp3");
-            tuneU.play();
-            //console.log("The 'J' key is pressed.");
-        } else{
-                console.log("Warning this key is out of bound");
-            }
-    });
-</script>
+<script src="virtualScripts.js"></script>
 </body>
-<style>
-
-    body{
-        background-color:sandybrown;
-    }
-    kbd{
-        background-color: white;
-        display:inline-block;
-        height: 200px;
-        width: 50px;
-        border: solid grey 1px;
-        text-align: center;
-        padding-top:200px;
-    }
-    .container {
-        min-width: 600px;
-        height: 600px;
-        margin: 200px auto;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .white-keys kbd {
-        width: 50px;
-        height: 300px;
-        background-color: white;
-        padding-top: 150px;
-        box-sizing: border-box;
-        margin-left: -4px;
-        font-family: "Roboto", sans-serif;
-    }
-
-    .black-keys {
-        width: 400px;
-        position: absolute;
-        display: flex;
-    }
-
-    .black-keys kbd {
-        color: white;
-        width: 30px;
-        height: 100px;
-        background-color: black;
-        padding-top: 70px;
-        box-sizing: border-box;
-        z-index: 1;
-        font-family: "Roboto", sans-serif
-    }
-
-    .black-keys kbd:first-child {
-        margin-left: 50px;
-    }
-
-    .black-keys kbd:nth-child(3) {
-        margin-left: 80px;
-    }
-
-    .black-keys kbd:nth-child(2), .black-keys kbd:nth-child(4), .black-keys kbd:nth-child(5) {
-        margin-left: 23px;
-    }
-
-</style>
 </html>
