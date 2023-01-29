@@ -5,6 +5,7 @@
     "jest": "24.9.0"
   },
   "scripts": {
+    "start": "index.js",
     "test": "jest"
   }
 }
